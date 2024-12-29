@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+// Book class definition
 class Book {
     private int id;
     private String title;
@@ -40,6 +41,7 @@ class Book {
     }
 }
 
+// Member class definition
 class Member {
     private int memberId;
     private String name;
@@ -69,6 +71,7 @@ class Member {
     }
 }
 
+// Library class definition
 class Library {
     private List<Book> books = new ArrayList<>();
     private List<Member> members = new ArrayList<>();
@@ -139,7 +142,14 @@ class Library {
     }
 
     public void saveBooksToFile() {
-        try (FileWriter writer = new FileWriter("books.txt")) {
+        File directory = new File("LibraryManagementSystem");
+        if (!directory.exists()) {
+            directory.mkdirs(); // Create directory if it doesn't exist
+        }
+
+        File file = new File(directory, "books.txt");
+
+        try (FileWriter writer = new FileWriter(file, false)) {
             writer.write("ID,Title,Author,Quantity\n");
             for (Book book : books) {
                 writer.write(book.getId() + "," + book.getTitle() + "," + book.getAuthor() + "," + book.getQuantity() + "\n");
@@ -151,6 +161,7 @@ class Library {
     }
 }
 
+// Main class
 public class LSM {
     public static void main(String[] args) {
         Library library = new Library();
