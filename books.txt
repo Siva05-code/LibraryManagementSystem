@@ -1,2 +1,9 @@
 ID,Title,Author,Quantity
 1,The Hundred-Page Machine Learning , Andriy Burko,3
+2,Clean Code,Robert C. Martin,7
+3,The Clean Coder,Robert C. Martin,5
+4,Clean Architecture,Robert C. Martin,6
+5,Agile Principles, Patterns, and Practices in C#,Robert C. Martin,4
+6,Software Craftsmanship,Robert C. Martin,3
+7,The Principles of Object-Oriented Programming,Robert C. Martin,2
+8,Designing Object-Oriented C++ Applications,Robert C. Martin,1
